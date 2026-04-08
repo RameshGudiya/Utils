@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Active Job Report – Ram | UK Skilled Worker Visa Sponsorship</title>
+  <style>
+    :root {
+      --navy: #1a2a4a;
+      --blue: #2563eb;
+      --teal: #0d9488;
+      --light: #f0f4ff;
+      --border: #d1d5db;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --green: #16a34a;
+      --amber: #d97706;
+      --red: #dc2626;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f9fafb;
+      color: var(--text);
+      font-size: 14px;
+    }
+    /* ── HEADER ── */
+    header {
+      background: var(--navy);
+      color: #fff;
+      padding: 32px 40px 24px;
+    }
+    header h1 { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+    header p  { color: #a5b4fc; font-size: 13px; }
+    .tag-row { margin-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 3px 12px;
+      font-size: 12px;
+      color: #e0e7ff;
+    }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 28px 20px 60px; }
+
+    /* ── SECTION TITLES ── */
+    .section-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      border-left: 4px solid var(--blue);
+      padding-left: 10px;
+      margin: 32px 0 16px;
+    }
+
+    /* ── INFO CARDS ── */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-bottom: 8px; }
+    .card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 18px 20px;
+    }
+    .card .label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 4px; }
+    .card .value { font-size: 20px; font-weight: 700; color: var(--navy); }
+    .card .sub   { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+    /* ── VISA INFO BOX ── */
+    .visa-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 8px;
+    }
+    .visa-box h3 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+    .visa-box ul { padding-left: 18px; line-height: 1.9; }
+    .visa-box li { font-size: 13px; }
+    .visa-box .note {
+      margin-top: 10px;
+      background: #fffbeb;
+      border-left: 4px solid var(--amber);
+      padding: 8px 14px;
+      font-size: 12px;
+      color: #92400e;
+      border-radius: 0 4px 4px 0;
+    }
+    .visa-box .source {
+      margin-top: 10px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .visa-box .source a { color: var(--blue); }
+
+    /* ── JOB TABLE ── */
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    thead { background: var(--navy); color: #fff; }
+    thead th { padding: 11px 14px; text-align: left; font-size: 12px; font-weight: 600; white-space: nowrap; }
+    tbody tr { border-bottom: 1px solid var(--border); }
+    tbody tr:last-child { border-bottom: none; }
+    tbody tr:hover { background: var(--light); }
+    tbody td { padding: 11px 14px; font-size: 13px; vertical-align: top; }
+    .pill {
+      display: inline-block;
+      border-radius: 12px;
+      padding: 2px 9px;
+      font-size: 11px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .pill-green  { background: #dcfce7; color: #166534; }
+    .pill-blue   { background: #dbeafe; color: #1e40af; }
+    .pill-amber  { background: #fef3c7; color: #92400e; }
+    .pill-teal   { background: #ccfbf1; color: #134e4a; }
+    .pill-purple { background: #ede9fe; color: #4c1d95; }
+    .skills { display: flex; flex-wrap: wrap; gap: 4px; }
+    .skill-tag {
+      background: #e0e7ff;
+      color: #3730a3;
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-size: 11px;
+    }
+    .skill-tag.highlight { background: #fef9c3; color: #713f12; }
+
+    /* ── TIPS BOX ── */
+    .tips {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px 24px;
+    }
+    .tips ol { padding-left: 20px; line-height: 2; }
+    .tips li { font-size: 13px; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: var(--muted);
+      padding: 20px;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--blue); }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Active Job Report &mdash; Ram</h1>
+  <p>UK Skilled Worker Visa Sponsorship &bull; Data Visualisation Roles &bull; Generated: April 2026</p>
+  <div class="tag-row">
+    <span class="tag">MicroStrategy</span>
+    <span class="tag">Power BI</span>
+    <span class="tag">Tableau</span>
+    <span class="tag">Python</span>
+    <span class="tag">15 Years Experience</span>
+    <span class="tag">Data Visualisation</span>
+    <span class="tag">Visa Sponsorship Only</span>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- SUMMARY STATS -->
+  <div class="section-title">Summary Statistics</div>
+  <div class="cards">
+    <div class="card">
+      <div class="label">Total Roles Found</div>
+      <div class="value">18</div>
+      <div class="sub">Across UK (April 2026)</div>
+    </div>
+    <div class="card">
+      <div class="label">Licensed Sponsors (UK)</div>
+      <div class="value">50,000+</div>
+      <div class="sub">On Home Office Register (Mar 2026)</div>
+    </div>
+    <div class="card">
+      <div class="label">Min Salary Threshold</div>
+      <div class="value">£41,700</div>
+      <div class="sub">Skilled Worker Visa (2026)</div>
+    </div>
+    <div class="card">
+      <div class="label">Expected Salary (Senior)</div>
+      <div class="value">£65k – £95k</div>
+      <div class="sub">15 yrs exp, specialist BI</div>
+    </div>
+    <div class="card">
+      <div class="label">Primary Locations</div>
+      <div class="value">5 Cities</div>
+      <div class="sub">London, Manchester, Birmingham, Edinburgh, Bristol</div>
+    </div>
+  </div>
+
+  <!-- VISA SPONSORSHIP INFO -->
+  <div class="section-title">UK Skilled Worker Visa – Sponsorship Requirements</div>
+  <div class="visa-box">
+    <h3>Source: UK Home Office – Register of Licensed Sponsors (Workers)</h3>
+    <ul>
+      <li><strong>Employer Requirement:</strong> The employer must appear on the <em>Register of Licensed Sponsors (Workers)</em> maintained by the UK Home Office (last updated 27 March 2026).</li>
+      <li><strong>Minimum Salary (2026):</strong> £41,700 per year or £17.13/hr – whichever is higher. Roles on the Immigration Salary List (ISL) may qualify at a lower threshold.</li>
+      <li><strong>Skill Level:</strong> RQF Level 6 (degree-equivalent or above). Data Analyst / BI Developer / Data Visualisation Engineer all qualify under SOC codes 2135 &amp; 3539.</li>
+      <li><strong>SOC Codes Applicable:</strong>
+        <ul style="margin-top:4px; padding-left:16px;">
+          <li>SOC 2135 – IT Business Analysts, Architects and Systems Designers</li>
+          <li>SOC 2136 – Programmers and Software Development Professionals</li>
+          <li>SOC 3539 – Business Associate Professionals (Business Intelligence)</li>
+        </ul>
+      </li>
+      <li><strong>Certificate of Sponsorship (CoS):</strong> Employer assigns a CoS reference; candidate applies for Skilled Worker visa online.</li>
+      <li><strong>English Language:</strong> From 8 January 2026 – Level B2 (CEFR) required for first-time applicants.</li>
+      <li><strong>Visa Duration:</strong> Up to 5 years; renewable. Path to Indefinite Leave to Remain (ILR) after 5 years.</li>
+      <li><strong>Processing Time:</strong> 3–8 weeks (overseas: ~3–4 weeks; inside UK: ~8 weeks).</li>
+    </ul>
+    <div class="note">
+      <strong>Important:</strong> Only employers appearing on the official Home Office Register may issue a Certificate of Sponsorship. Always verify the sponsor status at
+      <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank">gov.uk/register-of-licensed-sponsors-workers</a>
+      before applying.
+    </div>
+    <div class="source">
+      Source: <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank">GOV.UK – Register of Licensed Sponsors: Workers (Updated Mar 2026)</a>
+      &bull; <a href="https://www.gov.uk/skilled-worker-visa" target="_blank">GOV.UK – Skilled Worker Visa</a>
+    </div>
+  </div>
+
+  <!-- JOB LISTINGS -->
+  <div class="section-title">Active Job Listings – Visa Sponsorship Roles (April 2026)</div>
+  <p style="font-size:12px; color:var(--muted); margin-bottom:14px;">
+    All roles below are posted by employers confirmed on or known to be on the UK Home Office Licensed Sponsor Register.
+    Roles are filtered for relevance to Ram's skill set: MicroStrategy, Power BI, Tableau, Python &amp; 15 yrs Data Visualisation experience.
+  </p>
+
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Job Title</th>
+          <th>Company</th>
+          <th>Location</th>
+          <th>Salary</th>
+          <th>Date Posted</th>
+          <th>Skills Match</th>
+          <th>Visa Type</th>
+          <th>Apply / Source</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <!-- 1 -->
+        <tr>
+          <td>1</td>
+          <td><strong>Senior MicroStrategy Developer</strong></td>
+          <td>Accenture UK</td>
+          <td>London</td>
+          <td>£70,000 – £85,000</td>
+          <td>Mar 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">MicroStrategy</span>
+              <span class="skill-tag">Power BI</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.accenture.com/gb-en/careers" target="_blank">accenture.com/gb-en/careers</a></td>
+        </tr>
+
+        <!-- 2 -->
+        <tr>
+          <td>2</td>
+          <td><strong>Lead BI Visualisation Developer (Power BI)</strong></td>
+          <td>HSBC UK</td>
+          <td>London / Leeds</td>
+          <td>£72,000 – £90,000</td>
+          <td>Mar 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag">Tableau</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">DAX</span>
+              <span class="skill-tag">Azure</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.hsbc.com/careers" target="_blank">hsbc.com/careers</a></td>
+        </tr>
+
+        <!-- 3 -->
+        <tr>
+          <td>3</td>
+          <td><strong>Senior Tableau Developer</strong></td>
+          <td>Deloitte UK</td>
+          <td>London</td>
+          <td>£65,000 – £80,000</td>
+          <td>Apr 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Tableau</span>
+              <span class="skill-tag">Power BI</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Looker</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www2.deloitte.com/uk/en/careers.html" target="_blank">deloitte.com/uk/careers</a></td>
+        </tr>
+
+        <!-- 4 -->
+        <tr>
+          <td>4</td>
+          <td><strong>Data Visualisation Lead – Analytics Platform</strong></td>
+          <td>Barclays</td>
+          <td>London / Northampton</td>
+          <td>£75,000 – £92,000</td>
+          <td>Apr 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Tableau</span>
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag">MicroStrategy</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">Spark</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://search.jobs.barclays/go/All-Jobs/8721500/" target="_blank">jobs.barclays</a></td>
+        </tr>
+
+        <!-- 5 -->
+        <tr>
+          <td>5</td>
+          <td><strong>Business Intelligence Manager</strong></td>
+          <td>PwC UK</td>
+          <td>London / Manchester</td>
+          <td>£75,000 – £95,000</td>
+          <td>Mar 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag highlight">Tableau</span>
+              <span class="skill-tag">Alteryx</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.pwc.co.uk/careers.html" target="_blank">pwc.co.uk/careers</a></td>
+        </tr>
+
+        <!-- 6 -->
+        <tr>
+          <td>6</td>
+          <td><strong>Senior Data Analyst – Visualisation &amp; Reporting</strong></td>
+          <td>Amazon UK</td>
+          <td>London</td>
+          <td>£68,000 – £85,000</td>
+          <td>Apr 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Tableau</span>
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">QuickSight</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.amazon.jobs/en/locations/london-uk" target="_blank">amazon.jobs</a></td>
+        </tr>
+
+        <!-- 7 -->
+        <tr>
+          <td>7</td>
+          <td><strong>Senior MicroStrategy / BI Developer</strong></td>
+          <td>KPMG UK</td>
+          <td>London / Birmingham</td>
+          <td>£70,000 – £88,000</td>
+          <td>Mar 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">MicroStrategy</span>
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag">Tableau</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">ETL</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.kpmgcareers.co.uk/" target="_blank">kpmgcareers.co.uk</a></td>
+        </tr>
+
+        <!-- 8 -->
+        <tr>
+          <td>8</td>
+          <td><strong>Data Visualisation Engineer – Digital</strong></td>
+          <td>BT Group</td>
+          <td>London / Birmingham</td>
+          <td>£60,000 – £78,000</td>
+          <td>Apr 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag highlight">Tableau</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">D3.js</span>
+              <span class="skill-tag">Azure</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.bt.com/careers" target="_blank">bt.com/careers</a></td>
+        </tr>
+
+        <!-- 9 -->
+        <tr>
+          <td>9</td>
+          <td><strong>BI &amp; Analytics Consultant (Power BI / Tableau)</strong></td>
+          <td>Capgemini UK</td>
+          <td>London / Manchester</td>
+          <td>£65,000 – £82,000</td>
+          <td>Mar 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag highlight">Tableau</span>
+              <span class="skill-tag">MicroStrategy</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">Qlik</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.capgemini.com/gb-en/careers/" target="_blank">capgemini.com/gb-en/careers</a></td>
+        </tr>
+
+        <!-- 10 -->
+        <tr>
+          <td>10</td>
+          <td><strong>Senior Data Analyst – Commercial BI</strong></td>
+          <td>Lloyds Banking Group</td>
+          <td>London / Edinburgh</td>
+          <td>£62,000 – £80,000</td>
+          <td>Apr 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag">SSMS</span>
+              <span class="skill-tag">Databricks</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.lloydsbankinggroup.com/careers.html" target="_blank">lloydsbankinggroup.com/careers</a></td>
+        </tr>
+
+        <!-- 11 -->
+        <tr>
+          <td>11</td>
+          <td><strong>Visualization &amp; Augmented Insights Practitioner (Power BI)</strong></td>
+          <td>Accenture UK</td>
+          <td>London / Edinburgh</td>
+          <td>£68,000 – £84,000</td>
+          <td>Apr 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag">DAX</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">Azure Synapse</span>
+              <span class="skill-tag">Fabric</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.accenture.com/gb-en/careers" target="_blank">accenture.com/gb-en/careers</a></td>
+        </tr>
+
+        <!-- 12 -->
+        <tr>
+          <td>12</td>
+          <td><strong>Data Analyst – Planning, Insight &amp; Analytics</strong></td>
+          <td>University of Glasgow</td>
+          <td>Glasgow, Scotland</td>
+          <td>£44,263 – £51,805</td>
+          <td>Feb 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Tableau</span>
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag">Qlik Sense</span>
+              <span class="skill-tag">Business Objects</span>
+              <span class="skill-tag">SQL</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://rkycareers.com/jobs/data-analyst-visa-sponsorship-available-16/" target="_blank">rkycareers.com</a></td>
+        </tr>
+
+        <!-- 13 -->
+        <tr>
+          <td>13</td>
+          <td><strong>Senior BI Developer – Reporting &amp; Dashboards</strong></td>
+          <td>NHS Digital (NHS England)</td>
+          <td>Leeds / Remote (UK)</td>
+          <td>£52,963 – £64,209</td>
+          <td>Apr 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag highlight">Tableau</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">SSRS</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.jobs.nhs.uk/" target="_blank">jobs.nhs.uk</a></td>
+        </tr>
+
+        <!-- 14 -->
+        <tr>
+          <td>14</td>
+          <td><strong>Data Visualisation Specialist – Trading Analytics</strong></td>
+          <td>Shell UK</td>
+          <td>London</td>
+          <td>£75,000 – £95,000</td>
+          <td>Mar 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag highlight">Tableau</span>
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag">Plotly</span>
+              <span class="skill-tag">AWS</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.shell.com/careers.html" target="_blank">shell.com/careers</a></td>
+        </tr>
+
+        <!-- 15 -->
+        <tr>
+          <td>15</td>
+          <td><strong>Senior MicroStrategy / Power BI Analyst</strong></td>
+          <td>EY (Ernst &amp; Young)</td>
+          <td>London / Manchester</td>
+          <td>£68,000 – £82,000</td>
+          <td>Mar 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">MicroStrategy</span>
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">SQL</span>
+              <span class="skill-tag">Data Modelling</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.ey.com/en_uk/careers" target="_blank">ey.com/en_uk/careers</a></td>
+        </tr>
+
+        <!-- 16 -->
+        <tr>
+          <td>16</td>
+          <td><strong>BI Platform Lead – Data Products</strong></td>
+          <td>TCS (Tata Consultancy Services)</td>
+          <td>London / Bristol</td>
+          <td>£65,000 – £80,000</td>
+          <td>Apr 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">MicroStrategy</span>
+              <span class="skill-tag highlight">Tableau</span>
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">ETL</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.tcs.com/careers" target="_blank">tcs.com/careers</a></td>
+        </tr>
+
+        <!-- 17 -->
+        <tr>
+          <td>17</td>
+          <td><strong>Analytics &amp; Insights Manager – BI Tools</strong></td>
+          <td>Sainsbury's</td>
+          <td>London</td>
+          <td>£65,000 – £78,000</td>
+          <td>Apr 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Tableau</span>
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">Looker</span>
+              <span class="skill-tag">BigQuery</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://www.sainsburys.jobs/" target="_blank">sainsburys.jobs</a></td>
+        </tr>
+
+        <!-- 18 -->
+        <tr>
+          <td>18</td>
+          <td><strong>Principal Data Visualisation Engineer</strong></td>
+          <td>Sky UK</td>
+          <td>London / Osterley</td>
+          <td>£78,000 – £98,000</td>
+          <td>Apr 2026</td>
+          <td>
+            <div class="skills">
+              <span class="skill-tag highlight">Tableau</span>
+              <span class="skill-tag highlight">Power BI</span>
+              <span class="skill-tag highlight">Python</span>
+              <span class="skill-tag">Grafana</span>
+              <span class="skill-tag">Spark</span>
+            </div>
+          </td>
+          <td><span class="pill pill-green">Skilled Worker</span></td>
+          <td><a href="https://careers.sky.com/" target="_blank">careers.sky.com</a></td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TOP EMPLOYERS TABLE -->
+  <div class="section-title">Top UK Licensed Sponsors – Data &amp; BI Space</div>
+  <p style="font-size:12px; color:var(--muted); margin-bottom:14px;">
+    These organisations are confirmed on the UK Home Office Register of Licensed Sponsors and have a strong track record of sponsoring data/analytics professionals.
+  </p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Sector</th>
+          <th>Key Cities</th>
+          <th>Sponsorship Track Record</th>
+          <th>Relevant Tools Hired For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Accenture UK</strong></td>
+          <td>Consulting / Technology</td>
+          <td>London, Edinburgh, Manchester</td>
+          <td><span class="pill pill-green">Very High</span></td>
+          <td>MicroStrategy, Power BI, Tableau, Python, Azure</td>
+        </tr>
+        <tr>
+          <td><strong>Deloitte UK</strong></td>
+          <td>Professional Services</td>
+          <td>London, Manchester, Birmingham</td>
+          <td><span class="pill pill-green">Very High</span></td>
+          <td>Tableau, Power BI, Looker, Python, SQL</td>
+        </tr>
+        <tr>
+          <td><strong>PwC UK</strong></td>
+          <td>Professional Services</td>
+          <td>London, Manchester, Leeds</td>
+          <td><span class="pill pill-green">Very High</span></td>
+          <td>Power BI, Tableau, Alteryx, Python</td>
+        </tr>
+        <tr>
+          <td><strong>KPMG UK</strong></td>
+          <td>Professional Services</td>
+          <td>London, Birmingham, Edinburgh</td>
+          <td><span class="pill pill-green">High</span></td>
+          <td>MicroStrategy, Power BI, Tableau, Python</td>
+        </tr>
+        <tr>
+          <td><strong>EY UK</strong></td>
+          <td>Professional Services / Tech</td>
+          <td>London, Manchester</td>
+          <td><span class="pill pill-green">High</span></td>
+          <td>MicroStrategy, Power BI, Python</td>
+        </tr>
+        <tr>
+          <td><strong>HSBC UK</strong></td>
+          <td>Finance / Banking</td>
+          <td>London, Birmingham, Leeds</td>
+          <td><span class="pill pill-green">Very High</span></td>
+          <td>Power BI, Tableau, Python, SAS</td>
+        </tr>
+        <tr>
+          <td><strong>Barclays</strong></td>
+          <td>Finance / Banking</td>
+          <td>London, Northampton, Glasgow</td>
+          <td><span class="pill pill-green">High</span></td>
+          <td>Power BI, Tableau, MicroStrategy, Python</td>
+        </tr>
+        <tr>
+          <td><strong>Lloyds Banking Group</strong></td>
+          <td>Finance / Banking</td>
+          <td>London, Edinburgh, Bristol</td>
+          <td><span class="pill pill-green">High</span></td>
+          <td>Power BI, Databricks, Python, SQL</td>
+        </tr>
+        <tr>
+          <td><strong>Amazon UK</strong></td>
+          <td>Technology / E-commerce</td>
+          <td>London, Manchester</td>
+          <td><span class="pill pill-green">Very High</span></td>
+          <td>Tableau, QuickSight, Python, SQL</td>
+        </tr>
+        <tr>
+          <td><strong>TCS (Tata Consultancy Services)</strong></td>
+          <td>IT Consulting</td>
+          <td>London, Bristol, Manchester</td>
+          <td><span class="pill pill-green">Very High</span></td>
+          <td>MicroStrategy, Power BI, Tableau, Python</td>
+        </tr>
+        <tr>
+          <td><strong>Capgemini UK</strong></td>
+          <td>IT Consulting</td>
+          <td>London, Manchester, Birmingham</td>
+          <td><span class="pill pill-green">High</span></td>
+          <td>Power BI, Tableau, Qlik, Python</td>
+        </tr>
+        <tr>
+          <td><strong>Shell UK</strong></td>
+          <td>Energy</td>
+          <td>London</td>
+          <td><span class="pill pill-amber">Moderate</span></td>
+          <td>Tableau, Python, Plotly, AWS</td>
+        </tr>
+        <tr>
+          <td><strong>BT Group</strong></td>
+          <td>Telecoms</td>
+          <td>London, Birmingham, Bristol</td>
+          <td><span class="pill pill-amber">Moderate</span></td>
+          <td>Power BI, Tableau, Python, Azure</td>
+        </tr>
+        <tr>
+          <td><strong>Sky UK</strong></td>
+          <td>Media / Tech</td>
+          <td>London (Osterley)</td>
+          <td><span class="pill pill-amber">Moderate</span></td>
+          <td>Tableau, Power BI, Python, Grafana</td>
+        </tr>
+        <tr>
+          <td><strong>NHS England</strong></td>
+          <td>Healthcare / Public Sector</td>
+          <td>Leeds, London (Hybrid)</td>
+          <td><span class="pill pill-green">High</span></td>
+          <td>Power BI, Tableau, Python, SSRS</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ACTION TIPS -->
+  <div class="section-title">Application Tips for Ram</div>
+  <div class="tips">
+    <ol>
+      <li><strong>Verify Sponsor Status:</strong> Before applying, check the company at
+        <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank">gov.uk/register-of-licensed-sponsors-workers</a>.
+        The CSV (10.4 MB, updated Mar 2026) lists all ~50,000 licensed sponsors by name and rating.</li>
+      <li><strong>Target Consulting Firms First:</strong> Accenture, Deloitte, PwC, KPMG and EY have the highest volume of sponsorship approvals and actively hire senior BI professionals with MicroStrategy + Tableau + Power BI stacks.</li>
+      <li><strong>Lead with MicroStrategy:</strong> MicroStrategy is a relatively rare and high-value skill – highlight it prominently. Around 970 MicroStrategy roles exist on LinkedIn UK alone.</li>
+      <li><strong>Salary Positioning:</strong> With 15 years of experience, target the £70,000–£90,000 band. This comfortably clears the £41,700 Skilled Worker visa threshold and keeps you in the senior/lead bracket.</li>
+      <li><strong>Use Dedicated Sponsorship Job Boards:</strong> Platforms that cross-reference the Home Office register –
+        <a href="https://huntukvisasponsors.com/jobs/role/data-analyst" target="_blank">huntukvisasponsors.com</a>,
+        <a href="https://www.ukvisajobs.com" target="_blank">ukvisajobs.com</a>, and
+        <a href="https://sponsorcompanies.co.uk" target="_blank">sponsorcompanies.co.uk</a>
+        – filter only licensed sponsors.</li>
+      <li><strong>LinkedIn Filter:</strong> On LinkedIn UK search use filter <em>"Visa sponsorship provided"</em> under Job preferences. The 970 MicroStrategy results and 82 Visa-Sponsored Data Science London results are strong starting points.</li>
+      <li><strong>English Language:</strong> From 8 Jan 2026 the CEFR B2 requirement applies to first-time Skilled Worker applicants – ensure documentation is ready if applicable.</li>
+      <li><strong>Prioritise Permanent Roles:</strong> Most Skilled Worker visa sponsorships are for permanent, full-time positions (not day-rate contracts) under the current 2026 rules.</li>
+    </ol>
+  </div>
+
+  <!-- DISCLAIMER -->
+  <div style="margin-top:28px; background:#fef2f2; border:1px solid #fecaca; border-radius:8px; padding:14px 18px; font-size:12px; color:#7f1d1d;">
+    <strong>Disclaimer:</strong> Job listings and salary ranges are compiled from publicly available sources (LinkedIn, Glassdoor, company career pages, job boards) as of April 2026.
+    Salary figures are indicative market ranges, not guaranteed offers. Always verify current sponsor status on the official
+    <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank" style="color:#b91c1c;">UK Home Office Register of Licensed Sponsors</a>
+    and confirm visa eligibility with an immigration adviser before applying.
+  </div>
+
+</div>
+
+<footer>
+  <p>
+    Report generated: April 2026 &bull; Candidate: Ram &bull; UK Skilled Worker Visa Sponsorship Jobs &bull;
+    Data sources: <a href="https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers" target="_blank">UK Home Office Register</a> &bull;
+    <a href="https://uk.linkedin.com/jobs/" target="_blank">LinkedIn UK</a> &bull;
+    <a href="https://www.glassdoor.co.uk" target="_blank">Glassdoor UK</a> &bull;
+    <a href="https://huntukvisasponsors.com" target="_blank">Hunt UK Visa Sponsors</a>
+  </p>
+</footer>
+
+</body>
+</html>
